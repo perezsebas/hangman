@@ -3,9 +3,9 @@
   <p>
     Player: <input type="text" name="name" value=""><br>
     <span class="required">The player name is required</span><br><br>
-    <button type="button" name="button" routerLink="/game">Start</button>
+    <button type="button" name="button" (click)="start()" routerLink="/game">Start</button>
   </p>
-  <p>
+  <!--<p>
     Player name: {{ player.name }}
   </p>
   <p>
@@ -13,5 +13,5 @@
   </p>
   <p>
     Moves: {{ player.moves }}
-  </p>
+  </p>-->
 </div>
