@@ -7,19 +7,25 @@ import { PlayerModel } from './player-model';
   styleUrls: ['./player-name.component.css']
 })
 export class PlayerNameComponent implements OnInit {
-  player: PlayerModel = {
+  /*player: PlayerModel = {
     "id": 1,
     "name": 'Sebas',
     "round": 1,
     "moves": 5,
-  }
+  }*/
   constructor() { }
 
   ngOnInit() {
   }
 
   start(){
-    console.log("The game has started");
+    let player: PlayerModel = {
+      "id": 1,
+      "name": 'Sebas',
+      "round": 1,
+      "moves": 5,
+    }
+    console.log(player.name);
   }
 
 }
