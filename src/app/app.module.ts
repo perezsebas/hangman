@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PlayerNameComponent } from './player-name/player-name.component';
 import { GameComponent } from './game/game.component';
 import { ResultComponent } from './result/result.component';
+import { PlayerDataService } from '../services/player-data-service';
 
 const appRoutes: Routes = [
   { path: '', component: PlayerNameComponent },
@@ -28,7 +29,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [PlayerDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
