@@ -3,4 +3,5 @@ export class PlayerModel {
   name: string;
   round: number;
   moves: number;
+  won: boolean;
 }
