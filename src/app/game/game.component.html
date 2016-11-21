@@ -1,8 +1,34 @@
 <div class="container">
-  <h2>Round 1</h2>
-  <h3>Player: </h3>
-  <h3>Wrong moves left: 5</h3>
-  <p>
-    Word to guess
-  </p>
+
+  <div class="" *ngFor="let player of player">
+    <h2>Round {{ player.round }}</h2>
+    <h3>
+      Player: {{ player.name }}
+    </h3>
+    <p>Wrong moves left: {{ player.moves }}</p>
+  </div>
+
+  <div class="">
+  <h1>
+    <ul>
+      <li *ngFor="let letter of wordLetters" class="letters">
+        <span *ngIf="letter.chosen">
+          {{ letter.letter }}
+        </span>
+        <span *ngIf="!letter.chosen" class="letter">
+        {{ letter.none }}
+        </span>
+      </li>
+    </ul>
+  </h1>
+  </div>
+
+  <div class="">
+    <ul class="">
+      <li *ngFor="let letter of letters" class="letters">
+        <button class="letter" [disabled]="letter.chosen" (click)="try(letter.letter)">{{ letter.letter }}</button>
+      </li>
+    </ul>
+  </div>
+
 </div>

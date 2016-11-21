@@ -17,6 +17,30 @@ button{
 }
 button:hover{
   padding: 2px 45px;
-  background-color: #848484;
+  background-color: #c1c1f7;
   color: white;
+}
+.letters{
+  display: inline-block;
+  margin: 2px;
+}
+.letter{
+  padding: 2px 8px;
+  background-color: #ffffff;
+}
+.letter:hover{
+  padding: 2px 8px;
+  background-color: #c1c1f7;
+  color: white;
+}
+.letter:disabled{
+  padding: 2px 8px;
+  background-color: #c1c1f7;
+  color: black;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+ul{
+  list-style: none;
+  padding: 0;
 }
