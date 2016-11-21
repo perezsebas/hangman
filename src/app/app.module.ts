@@ -10,8 +10,6 @@ import { GameComponent } from './game/game.component';
 import { ResultComponent } from './result/result.component';
 import { PlayerDataService } from '../services/player-data-service';
 import { WordsDataService } from '../services/words-data-service';
-import { GuessLetter } from '../pipes/guess-letter';
-import { SecretWord } from '../pipes/secret-word';
 
 export const appRoutes: Routes = [
   { path: '', component: PlayerNameComponent },
@@ -24,9 +22,7 @@ export const appRoutes: Routes = [
     AppComponent,
     PlayerNameComponent,
     GameComponent,
-    ResultComponent,
-    GuessLetter,
-    SecretWord
+    ResultComponent
   ],
   imports: [
     BrowserModule,

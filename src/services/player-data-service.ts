@@ -14,24 +14,30 @@ export class PlayerDataService {
     return Player;
   }
 
-  setPlayerName(name){
-    for (let i in Player) {
-      //if (Player[i].id == id) {
-        Player[i].name = name;
-      //}
-     }
+  setPlayer(name){
+    Player.name = name;
+    Player.round = 1;
+    Player.moves = 5,
+    Player.won = false
+  }
+
+  nextLevel(){
+     Player.round++;
+     Player.moves = 5
+     this.router.navigate(['/game']);
+  }
+
+  wonGame(){
+     Player.won = true
+     this.router.navigate(['/result']);
   }
 
   setTry(){
-     for (let i in Player) {
-       //if (Letters[i].letter == guess) {
-         Player[i].moves--;
-         if(Player[i].moves == 0){
-            Player[i].moves = 5;
-           this.router.navigate(['/result']);
-         }
-       //}
-     }
+       Player.moves--;
+       if(Player.moves == 0){
+          Player.moves = 5;
+         this.router.navigate(['/result']);
+       }
    }
 
 }

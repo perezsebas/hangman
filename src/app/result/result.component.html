@@ -1,8 +1,8 @@
-<div class="container" *ngFor="let player of player">
+<div class="container">
   <h2 *ngIf="!player.won">You lost the game</h2>
   <div *ngIf="player.won">
     <h2>We have a WINNER!</h2>
-    <p>Player is the new Conqueror!</p>
+    <p>{{ player.name }} is the new Conqueror!</p>
   </div>
     <button type="button" name="button" routerLink="">Play Again</button>
 </div>

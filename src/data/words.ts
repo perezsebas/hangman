@@ -2,11 +2,11 @@ import { WordModel } from '../models/words-model';
 
 export let Words: WordModel[]  = [
   {
-    "word": "hola",
+    "word": "hello",
     "state": true,
   },
   {
-    "word": "mundo",
+    "word": "world",
     "state": false,
   },
   {
@@ -15,6 +15,54 @@ export let Words: WordModel[]  = [
   },
   {
     "word": "yuxi",
+    "state": false,
+  },
+  {
+    "word": "javascript",
+    "state": false,
+  },
+  {
+    "word": "pacific",
+    "state": false,
+  },
+  {
+    "word": "challenges",
+    "state": false,
+  },
+  {
+    "word": "software",
+    "state": false,
+  },
+  {
+    "word": "medellin",
+    "state": false,
+  },
+  {
+    "word": "colombia",
+    "state": false,
+  },
+  {
+    "word": "development",
+    "state": false,
+  },
+  {
+    "word": "values",
+    "state": false,
+  },
+  {
+    "word": "culture",
+    "state": false,
+  },
+  {
+    "word": "teamwork",
+    "state": false,
+  },
+  {
+    "word": "global",
+    "state": false,
+  },
+  {
+    "word": "coding",
     "state": false,
   }
 ]

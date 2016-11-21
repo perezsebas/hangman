@@ -22,7 +22,7 @@ export class PlayerNameComponent implements OnInit {
   }
 
   start(){
-    this.playerDataService.setPlayerName(this.name);
+    this.playerDataService.setPlayer(this.name);
   }
 
 }
