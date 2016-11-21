@@ -64,5 +64,9 @@ export let Words: WordModel[]  = [
   {
     "word": "coding",
     "state": false,
+  },
+  {
+    "word": "build",
+    "state": false,
   }
 ]
