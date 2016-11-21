@@ -1,0 +1,2 @@
+body{font-family:monospace}.required{font-size:10px;color:blue}.container{width:70%;margin:0 auto;text-align:center}button{padding:2px 45px;background-color:#fff}button:hover{padding:2px 45px;background-color:#c1c1f7;color:#fff}.letters{display:inline-block;margin:2px}.letter{padding:2px 8px;background-color:#fff}.letter:hover{color:#fff}.letter:disabled,.letter:hover{padding:2px 8px;background-color:#c1c1f7}.letter:disabled{color:#000;cursor:not-allowed;pointer-events:none}ul{list-style:none;padding:0}
+/*# sourceMappingURL=styles.b2328beb0372c051d06d.bundle.map*/
