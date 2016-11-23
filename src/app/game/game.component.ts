@@ -23,15 +23,9 @@ export class GameComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.player = this.playerDataService.getPlayer();
-    this.word = this.wordsDataService.getWord();
+    this.initialize();
     this.letters = this.wordsDataService.getLetters();
     this.won = false;
-    this.round = this.player.round;
-    this.wordLetters = this.word.word.split(',');
-    for (let i in this.word.word) {
-        this.wordLetters[i] = {letter: this.word.word[i], chosen: false, none: " _ "};
-    }
   }
 
   try (guess) {
@@ -64,20 +58,23 @@ export class GameComponent implements OnInit {
       }else{
         this.playerDataService.nextLevel();
         this.wordsDataService.resetLetters();
-
-        this.player = this.playerDataService.getPlayer();
-        this.round = this.player.round;
-
-        this.word = this.wordsDataService.getWord();
-        this.wordLetters = this.word.word.split(',');
-        for (let i in this.word.word) {
-            this.wordLetters[i] = {letter: this.word.word[i], chosen: false, none: " _ "};
-        }
+        this.initialize();
       }
     }
 
     if(!this.guess){
       this.playerDataService.setTry();
+    }
+  }
+
+  initialize(){
+    this.player = this.playerDataService.getPlayer();
+    this.round = this.player.round;
+
+    this.word = this.wordsDataService.getWord();
+    this.wordLetters = this.word.word.split(',');
+    for (let i in this.word.word) {
+        this.wordLetters[i] = {letter: this.word.word[i], chosen: false};
     }
   }
 
