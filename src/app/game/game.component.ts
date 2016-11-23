@@ -12,8 +12,6 @@ export class GameComponent implements OnInit {
   public word;
   public wordLetters;
   public guess;
-  public won;
-  public round;
   public roundToWin = 3;
   public letters;
 
@@ -25,7 +23,6 @@ export class GameComponent implements OnInit {
   ngOnInit() {
     this.initialize();
     this.letters = this.wordsDataService.getLetters();
-    this.won = false;
   }
 
   try (guess) {
@@ -46,14 +43,14 @@ export class GameComponent implements OnInit {
         }
 
         if(notYet){
-          this.won = true;
+          this.player.won = true;
         }else{
-          this.won = false;
+          this.player.won = false;
         }
     }
 
-    if(this.won){
-      if(this.round == this.roundToWin){
+    if(this.player.won){
+      if(this.player.round == this.roundToWin){
         this.playerDataService.wonGame();
       }else{
         this.playerDataService.nextLevel();
@@ -69,8 +66,6 @@ export class GameComponent implements OnInit {
 
   initialize(){
     this.player = this.playerDataService.getPlayer();
-    this.round = this.player.round;
-
     this.word = this.wordsDataService.getWord();
     this.wordLetters = this.word.word.split(',');
     for (let i in this.word.word) {
