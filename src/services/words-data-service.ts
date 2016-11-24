@@ -2,18 +2,28 @@ import { WordModel } from '../models/words-model';
 import { Words } from '../data/words';
 import { LetterModel } from '../models/letter-model';
 import { Letters } from '../data/letters';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Pipe, PipeTransform } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+//import { Observable } from 'rxjs/Rx';
+
 
 @Injectable()
 export class WordsDataService {
+
+  constructor(
+    private http: Http
+  ) {}
 
   getWord(){
     return Words[Math.floor(Math.random() * Words.length)];
   }
 
   getLetters(){
-    return Letters;
+    //return Letters;
+    return this.http.get('data/letters.json')
+      .map(response => <LetterModel[]>response.json().data);
   }
 
   setTry(guess, chosen){

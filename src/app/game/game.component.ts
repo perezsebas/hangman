@@ -22,7 +22,9 @@ export class GameComponent implements OnInit {
 
   ngOnInit() {
     this.initialize();
-    this.letters = this.wordsDataService.getLetters();
+    //this.letters = this.wordsDataService.getLetters();
+    this.wordsDataService.getLetters()
+      .subscribe(letters => this.letters = letters);
   }
 
   try (guess) {
