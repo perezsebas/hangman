@@ -20,11 +20,7 @@ export class PlayerDataService {
   }
 
   setPlayer(name){
-    Player.id = 1;
     Player.name = name;
-    Player.round = 1;
-    Player.moves = 5;
-    Player.won = false;
     Players.push(Player);
   }
 
