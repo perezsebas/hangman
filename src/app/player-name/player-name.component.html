@@ -3,6 +3,6 @@
   <p>
     Player <input type="text" name="name" [(ngModel)]="name"><br>
     <span class="required">The player name is required</span><br><br>
-    <button type="button" name="button" (click)="start()" routerLink="/game">Start</button>
+    <button type="button" name="button" (click)="start(name)" routerLink="/game">Start</button>
   </p>
 </div>

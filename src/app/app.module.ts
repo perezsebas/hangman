@@ -13,6 +13,7 @@ import { WordsDataService } from '../services/words-data-service';
 
 export const appRoutes: Routes = [
   { path: '', component: PlayerNameComponent },
+  { path: 'player', component: PlayerNameComponent },
   { path: 'game', component: GameComponent },
   { path: 'result', component: ResultComponent }
 ];

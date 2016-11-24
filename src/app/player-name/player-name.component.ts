@@ -4,12 +4,12 @@ import { WordsDataService } from '../../services/words-data-service';
 
 @Component({
   selector: 'player-name',
-  inputs: ['name'],
+  //inputs: ['name'],
   templateUrl: './player-name.component.html',
   styleUrls: ['./player-name.component.css']
 })
 export class PlayerNameComponent implements OnInit {
-  public name: string;
+  //public name: string;
   public player;
 
   constructor(
@@ -21,8 +21,12 @@ export class PlayerNameComponent implements OnInit {
     this.wordsDataService.resetLetters();
   }
 
-  start(){
-    this.playerDataService.setPlayer(this.name);
+  start(name){
+    console.log(name);
+    if(name == undefined){
+      name = "NoName";
+    }
+    this.playerDataService.setPlayer(name);
   }
 
 }

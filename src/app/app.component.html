@@ -2,5 +2,10 @@
   <h1>
     {{title}}
   </h1>
+  <nav>
+    <a routerLink="/player" [routerLinkActive]="['active']">New Game</a>
+    <a routerLink="/game" [routerLinkActive]="['active']">Add new word</a>
+    <a routerLink="/result" [routerLinkActive]="['active']">View players</a>
+  </nav>
 </div>
 <router-outlet></router-outlet>
