@@ -1,5 +1,6 @@
 import { PlayerModel } from '../models/player-model';
 import { Player } from '../data/player-data';
+import { Players } from '../data/players';
 import { Injectable } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 
@@ -14,11 +15,17 @@ export class PlayerDataService {
     return Player;
   }
 
+  getPlayers(){
+    return Players;
+  }
+
   setPlayer(name){
+    Player.id = 1;
     Player.name = name;
     Player.round = 1;
-    Player.moves = 5,
-    Player.won = false
+    Player.moves = 5;
+    Player.won = false;
+    Players.push(Player);
   }
 
   nextLevel(){

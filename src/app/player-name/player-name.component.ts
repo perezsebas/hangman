@@ -10,7 +10,7 @@ import { WordsDataService } from '../../services/words-data-service';
 })
 export class PlayerNameComponent implements OnInit {
   //public name: string;
-  public player;
+  //public player;
 
   constructor(
     private playerDataService: PlayerDataService,
@@ -22,7 +22,7 @@ export class PlayerNameComponent implements OnInit {
   }
 
   start(name){
-    console.log(name);
+    //console.log(name);
     if(name == undefined){
       name = "NoName";
     }

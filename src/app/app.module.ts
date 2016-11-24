@@ -10,12 +10,14 @@ import { GameComponent } from './game/game.component';
 import { ResultComponent } from './result/result.component';
 import { PlayerDataService } from '../services/player-data-service';
 import { WordsDataService } from '../services/words-data-service';
+import { PlayersComponent } from './players/players.component';
 
 export const appRoutes: Routes = [
   { path: '', component: PlayerNameComponent },
   { path: 'player', component: PlayerNameComponent },
   { path: 'game', component: GameComponent },
-  { path: 'result', component: ResultComponent }
+  { path: 'result', component: ResultComponent },
+  { path: 'players', component: PlayersComponent }
 ];
 
 @NgModule({
@@ -23,7 +25,8 @@ export const appRoutes: Routes = [
     AppComponent,
     PlayerNameComponent,
     GameComponent,
-    ResultComponent
+    ResultComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule,
