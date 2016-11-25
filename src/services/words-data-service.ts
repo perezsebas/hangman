@@ -22,7 +22,9 @@ export class WordsDataService {
 
   getLetters(){
     //return Letters;
-    return this.http.get('data/letters.json')
+    //return this.http.get('data/letters.json')
+    //return this.http.get('../../server/getUsers')
+    return this.http.get('http://localhost:8181/getLetters')
       .map(response => <LetterModel[]>response.json().data);
   }
 
