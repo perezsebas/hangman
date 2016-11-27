@@ -14,7 +14,13 @@ app.use(function(req, res, next) {
 });
 
 app.get("/getLetters", (req, res) => {
-  res.json(
+  let letters = mongoUtil.letters();
+  letters.find().toArray((err, docs) => {
+    console.log(JSON.stringify(docs));
+    //let lettersNames = docs.map((letter) => letter);
+    res.json(JSON.stringify(docs));
+  });
+  /*res.json(
     {
        "data": [
         {
@@ -123,7 +129,7 @@ app.get("/getLetters", (req, res) => {
         }
       ]
     }
-  );
+  );*/
 });
 
 app.listen(8181, () => console.log("listening on 8181"));

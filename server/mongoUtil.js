@@ -14,5 +14,8 @@ module.exports = {
       _db = db;
       console.log("Connnected to DB");
     });
+  },
+  letters(){
+    return _db.collection('letters');
   }
 }
