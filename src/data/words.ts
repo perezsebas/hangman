@@ -14,15 +14,7 @@ export let Words: WordModel[]  = [
     "state": false,
   },
   {
-    "word": "yuxi",
-    "state": false,
-  },
-  {
     "word": "javascript",
-    "state": false,
-  },
-  {
-    "word": "pacific",
     "state": false,
   },
   {
